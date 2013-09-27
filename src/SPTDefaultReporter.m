@@ -19,7 +19,7 @@
 - (void)printSectionHeader:(NSString *)header;
 - (void)printSessionSections:(XCTestSuiteRun *)suiteRun;
 - (void)printSessionDetails:(XCTestSuiteRun *)suiteRun;
-- (void)printSessionResults:(XCTestSuiteRun *)suiteRn;
+- (void)printSessionResults:(XCTestSuiteRun *)suiteRun;
 - (void)printSummaryForTestCaseClass:(Class)testCaseClass
                         testCaseRuns:(NSArray *)testCaseRuns;
 - (void)printXCodeIntegrationOutputForSession:(XCTestRun *)sessionRun;
