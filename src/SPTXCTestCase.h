@@ -9,7 +9,7 @@
 
 @interface SPTXCTestCase : XCTestCase {
   NSInvocation *_SPT_invocation;
-  SenTestCaseRun *_SPT_run;
+  XCTestCaseRun *_SPT_run;
   BOOL _SPT_skipped;
 }
 
