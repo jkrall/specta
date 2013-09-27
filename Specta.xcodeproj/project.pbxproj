@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3306C084037079BACEA57838 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3306C5498589744B0B1E0CA5 /* XCTest.framework */; };
+		3306C155F48BB9A6D50A494B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3306C5498589744B0B1E0CA5 /* XCTest.framework */; };
+		3306C29C3343230D8F45BB9F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3306C5498589744B0B1E0CA5 /* XCTest.framework */; };
+		3306C51829C8FA859D33279C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3306C5498589744B0B1E0CA5 /* XCTest.framework */; };
 		372B8853169A31F0005FBE0C /* AsyncSpecTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 372B8852169A31F0005FBE0C /* AsyncSpecTest.m */; };
 		372B8854169A31F0005FBE0C /* AsyncSpecTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 372B8852169A31F0005FBE0C /* AsyncSpecTest.m */; };
 		CD564BEF17B09D83003942F5 /* CustomReporterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CD564BEE17B09D83003942F5 /* CustomReporterTest.m */; };
@@ -171,6 +175,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3306C5498589744B0B1E0CA5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = ../../../Applications/Xcode.app/Contents/Developer/Library/Frameworks/XCTest.framework; sourceTree = "<group>"; };
 		372B8852169A31F0005FBE0C /* AsyncSpecTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = AsyncSpecTest.m; sourceTree = "<group>"; tabWidth = 2; };
 		CD564BEE17B09D83003942F5 /* CustomReporterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomReporterTest.m; sourceTree = "<group>"; };
 		CDB75B32176E427900FF6631 /* SenTestLog+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SenTestLog+Specta.h"; sourceTree = "<group>"; };
@@ -283,6 +288,7 @@
 			files = (
 				E9B777E314BA313A00D8DC76 /* Foundation.framework in Frameworks */,
 				E9B777E114BA312600D8DC76 /* SenTestingKit.framework in Frameworks */,
+				3306C29C3343230D8F45BB9F /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +300,7 @@
 				E9B777F514BA320400D8DC76 /* SenTestingKit.framework in Frameworks */,
 				E9B777BB14BA294C00D8DC76 /* libSpecta-iOS.a in Frameworks */,
 				E96187C814C4AFBD0021D7CE /* libExpecta-ios-universal.a in Frameworks */,
+				3306C155F48BB9A6D50A494B /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +310,7 @@
 			files = (
 				E9B777D414BA306F00D8DC76 /* Foundation.framework in Frameworks */,
 				E9D96A5614B6BF0A007D9521 /* SenTestingKit.framework in Frameworks */,
+				3306C51829C8FA859D33279C /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +322,7 @@
 				E9B777F314BA31FC00D8DC76 /* SenTestingKit.framework in Frameworks */,
 				E9D96A4014B6B8AB007D9521 /* libSpecta.a in Frameworks */,
 				E9D9425814B8B43200CD833A /* libExpecta-macosx.a in Frameworks */,
+				3306C084037079BACEA57838 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +514,7 @@
 				E9B777DC14BA30CE00D8DC76 /* macosx */,
 				E9B777DD14BA30E100D8DC76 /* ios */,
 				E9D96A3B14B6B8AB007D9521 /* SenTestingKit.framework */,
+				3306C5498589744B0B1E0CA5 /* XCTest.framework */,
 			);
 			name = frameworks;
 			sourceTree = "<group>";
