@@ -169,29 +169,6 @@
   return [NSString stringWithFormat:@"-[%@ %@]", specName, exampleName];
 }
 
-// TODO: remove? never used
-- (void)logException:(NSException *)exception {
-  if(![exception filename]) {
-    NSString *name = [exception name];
-    NSString *reason = [exception reason];
-    SPTSpec *spec = [[self class] SPT_spec];
-    NSString *file = spec.fileName;
-    NSString *description = [NSString stringWithFormat:@"%@: %@", name, reason];
-    if([exception respondsToSelector:@selector(callStackSymbols)]) {
-      NSArray *callStack = [exception callStackSymbols];
-      if(callStack) {
-        description = [NSString stringWithFormat:@"%@\n  Call Stack:\n    %@", description, [callStack componentsJoinedByString:@"\n    "]];
-      }
-    }
-    NSString * sanitizedDescription = [description stringByReplacingOccurrencesOfString:@"%@" withString:@"?"];
-    exception = [NSException exceptionWithName:name reason:description
-                             userInfo:[[NSException failureInFile:file atLine:0 withDescription:sanitizedDescription] userInfo]];
-  }
-  // TODO: fix me? never used
-  // SPTXCTestCase *currentTestCase = [[[NSThread currentThread] threadDictionary] objectForKey:@"SPT_currentTestCase"];
-  // [currentTestCase.SPT_run addException:exception];
-}
-
 - (void)performTest:(XCTestRun *)run {
   self.SPT_run = (XCTestCaseRun *)run;
   [super performTest:run];
