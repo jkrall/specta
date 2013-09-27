@@ -1,4 +1,3 @@
-#import <SenTestingKit/SenTestingKit.h>
 #import <XCTest/XCTest.h>
 #import "XCTestCase+Specta.h"
 

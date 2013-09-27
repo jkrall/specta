@@ -6,9 +6,9 @@
 #import "SpectaUtility.h"
 #import <objc/runtime.h>
 
-@interface NSObject (SPTSenTestCase)
+@interface NSObject (SPTXCTestCase)
 
-+ (NSArray *)senAllSuperclasses;
++ (NSArray *)xctAllSuperclasses;
 
 @end
 
@@ -176,7 +176,7 @@
 }
 
 + (NSArray *)xctAllSuperclasses {
-  NSArray *arr = [super senAllSuperclasses];
+  NSArray *arr = [super xctAllSuperclasses];
   if([arr objectAtIndex:0] == [SPTXCTestCase class]) {
     return [NSArray arrayWithObject:[NSObject class]];
   }

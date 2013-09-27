@@ -19,7 +19,7 @@
       }
     }
   }
-  else if ([self isKindOfClass:[SenTestCaseRun class]])
+  else if ([self isKindOfClass:[XCTestCaseRun class]])
   {
     block((XCTestCaseRun *)self);
   }
