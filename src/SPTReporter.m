@@ -91,12 +91,12 @@
 // ===== RUN STACK =====================================================================================================
 #pragma mark - Run Stack
 
-- (void)pushRunStack:(SenTestRun *)run
+- (void)pushRunStack:(XCTestRun *)run
 {
   [(NSMutableArray *)self.runStack addObject:run];
 }
 
-- (void)popRunStack:(SenTestRun *)run
+- (void)popRunStack:(XCTestRun *)run
 {
   NSAssert(run != nil,
            @"Attempt to pop nil test run");
@@ -112,12 +112,12 @@
 // ===== TEST SUITE ====================================================================================================
 #pragma mark - Test Suite
 
-- (void)testSuiteDidBegin:(SenTestSuiteRun *)suiteRun
+- (void)testSuiteDidBegin:(XCTestSuiteRun *)suiteRun
 {
   [self pushRunStack:suiteRun];
 }
 
-- (void)testSuiteDidEnd:(SenTestSuiteRun *)suiteRun
+- (void)testSuiteDidEnd:(XCTestSuiteRun *)suiteRun
 {
   [self popRunStack:suiteRun];
 }
@@ -125,17 +125,17 @@
 // ===== TEST CASES ====================================================================================================
 #pragma mark - Test Cases
 
-- (void)testCaseDidBegin:(SenTestCaseRun *)testCaseRun
+- (void)testCaseDidBegin:(XCTestCaseRun *)testCaseRun
 {
   [self pushRunStack:testCaseRun];
 }
 
-- (void)testCaseDidEnd:(SenTestCaseRun *)testCaseRun
+- (void)testCaseDidEnd:(XCTestCaseRun *)testCaseRun
 {
   [self popRunStack:testCaseRun];
 }
 
-- (void)testCaseDidFail:(SenTestCaseRun *)testCaseRun
+- (void)testCaseDidFail:(XCTestCaseRun *)testCaseRun
 {
 
 }
