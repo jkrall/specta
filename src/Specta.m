@@ -145,7 +145,7 @@ void SPT_itShouldBehaveLike(const char *fileName, NSUInteger lineNumber, NSStrin
     SPTXCTestCase *currentTestCase = [[[NSThread currentThread] threadDictionary] objectForKey:@"SPT_currentTestCase"];
     if(currentTestCase) {
       NSException *exception = [NSException failureInFile:[NSString stringWithUTF8String:fileName] atLine:(int)lineNumber withDescription:@"itShouldBehaveLike should not be invoked inside an example block!"];
-      [currentTestCase failWithException: exception];
+      [currentTestCase recordFailureWithDescription:[exception description] inFile:@"" atLine:0 expected:YES];
     } else {
       it(name, ^{
         NSException *exception = [NSException failureInFile:[NSString stringWithUTF8String:fileName] atLine:(int)lineNumber withDescription:[NSString stringWithFormat:@"Shared example group \"%@\" does not exist.", name]];
