@@ -38,7 +38,7 @@ static void runExampleBlock(id block, NSString *name) {
       SPTXCTestCase *currentTestCase = [[[NSThread currentThread] threadDictionary] objectForKey:@"SPT_currentTestCase"];
       SPTSpec *spec = [[currentTestCase class] SPT_spec];
       NSException *exception = [NSException failureInFile:spec.fileName atLine:(int)spec.lineNumber withDescription:message];
-      [currentTestCase failWithException: exception];
+      [currentTestCase recordFailureWithDescription:[exception description] inFile:@"" atLine:0 expected:YES];
     }
   } else {
     ((SPTVoidBlock)block)();

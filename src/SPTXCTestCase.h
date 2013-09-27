@@ -1,6 +1,6 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import <XCTest/XCTest.h>
-#import "SenTestCase+Specta.h"
+#import "XCTestCase+Specta.h"
 
 @class
   SPTSpec

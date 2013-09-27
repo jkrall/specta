@@ -1,5 +1,5 @@
 #import "TestHelper.h"
-#import "SenTestCase+Specta.h"
+#import "XCTestCase+Specta.h"
 
 SpecBegin(_SenTestCaseSpectaTest)
 

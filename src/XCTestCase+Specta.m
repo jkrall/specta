@@ -1,7 +1,8 @@
-#import "SenTestCase+Specta.h"
+#import "XCTestCase+Specta.h"
 #import "SPTXCTestCase.h"
+#import "SPTExample.h"
 
-@implementation SenTestCase (Specta)
+@implementation XCTestCase (Specta)
 
 - (NSString *)SPT_title
 {

@@ -1,7 +1,7 @@
 #import "SPTDefaultReporter.h"
 #import "SPTXCTestCase.h"
 #import "SenTestRun+Specta.h"
-#import "SenTestCase+Specta.h"
+#import "XCTestCase+Specta.h"
 #import "SpectaUtility.h"
 #import <objc/runtime.h>
 
