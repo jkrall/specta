@@ -1,11 +1,11 @@
-#import "SenTestLog+Specta.h"
+#import "XCTestLog+Specta.h"
 #import "SPTReporter.h"
 #import "SPTXCTestCase.h"
 #import "SPTExample.h"
 
 #define SPTSharedReporter ([SPTReporter sharedReporter])
 
-@implementation SenTestLog (Specta)
+@implementation XCTestLog (Specta)
 
 + (void) testSuiteDidStart:(NSNotification *) aNotification
 {
