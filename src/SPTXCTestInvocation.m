@@ -1,6 +1,6 @@
-#import "SPTSenTestInvocation.h"
+#import "SPTXCTestInvocation.h"
 
-@implementation SPTSenTestInvocation
+@implementation SPTXCTestInvocation
 
 @synthesize
   SPT_invocationBlock=_SPT_invocationBlock

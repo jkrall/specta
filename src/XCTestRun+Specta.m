@@ -8,12 +8,12 @@
 {
   if (block == nil) return;
   
-  if ([self isKindOfClass:[SenTestSuiteRun class]])
+  if ([self isKindOfClass:[XCTestSuiteRun class]])
   {
-    NSArray * testRuns = ((SenTestSuiteRun *)self).testRuns;
+    NSArray * testRuns = ((XCTestSuiteRun *)self).testRuns;
     if (testRuns != nil)
     {
-      for (SenTestRun * testRun in testRuns)
+      for (XCTestRun * testRun in testRuns)
       {
         [testRun SPT_visitTestCaseRunsWithBlock:block];
       }
@@ -21,7 +21,7 @@
   }
   else if ([self isKindOfClass:[SenTestCaseRun class]])
   {
-    block((SenTestCaseRun *)self);
+    block((XCTestCaseRun *)self);
   }
 }
 
@@ -32,9 +32,9 @@
 {
   NSUInteger pendingTestCaseCount = 0;
   
-  if ([self isKindOfClass:[SenTestSuiteRun class]])
+  if ([self isKindOfClass:[XCTestSuiteRun class]])
   {
-    for (SenTestRun * testRun in [(SenTestSuiteRun *)self testRuns])
+    for (XCTestRun * testRun in [(XCTestSuiteRun *)self testRuns])
     {
       pendingTestCaseCount += [testRun pendingTestCaseCount];
     }
@@ -58,9 +58,9 @@
 {
   NSUInteger skippedTestCaseCount = 0;
   
-  if ([self isKindOfClass:[SenTestSuiteRun class]])
+  if ([self isKindOfClass:[XCTestSuiteRun class]])
   {
-    for (SenTestRun * testRun in [(SenTestSuiteRun *)self testRuns])
+    for (XCTestRun * testRun in [(XCTestSuiteRun *)self testRuns])
     {
       skippedTestCaseCount += [testRun skippedTestCaseCount];
     }

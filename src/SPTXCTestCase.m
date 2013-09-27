@@ -1,7 +1,7 @@
 #import "SPTXCTestCase.h"
 #import "SPTSpec.h"
 #import "SPTExample.h"
-#import "SPTSenTestInvocation.h"
+#import "SPTXCTestInvocation.h"
 #import "SPTSharedExampleGroups.h"
 #import "SpectaUtility.h"
 #import <objc/runtime.h>
@@ -145,7 +145,7 @@
 + (NSArray *)testInvocations {
   NSMutableArray *invocations = [NSMutableArray array];
   for(NSUInteger i = 0; i < [[self SPT_spec].compiledExamples count]; i ++) {
-    SPTSenTestInvocation *invocation = (SPTSenTestInvocation *)[SPTSenTestInvocation invocationWithMethodSignature:[self instanceMethodSignatureForSelector:@selector(SPT_runExampleAtIndex:)]];
+    SPTXCTestInvocation *invocation = (SPTXCTestInvocation *)[SPTXCTestInvocation invocationWithMethodSignature:[self instanceMethodSignatureForSelector:@selector(SPT_runExampleAtIndex:)]];
     invocation.SPT_invocationBlock = ^{
       [(SPTXCTestCase *)[invocation target] SPT_runExampleAtIndex:i];
     };
@@ -187,16 +187,17 @@
                              userInfo:[[NSException failureInFile:file atLine:0 withDescription:sanitizedDescription] userInfo]];
   }
   SPTXCTestCase *currentTestCase = [[[NSThread currentThread] threadDictionary] objectForKey:@"SPT_currentTestCase"];
-  [currentTestCase.SPT_run addException:exception];
+    // TODO: fix me
+  //[currentTestCase.SPT_run addException:exception];
 }
 
-- (void)performTest:(SenTestRun *)run {
-  self.SPT_run = (SenTestCaseRun *)run;
+- (void)performTest:(XCTestRun *)run {
+  self.SPT_run = (XCTestCaseRun *)run;
   [super performTest:run];
   self.SPT_run = nil;
 }
 
-+ (NSArray *)senAllSuperclasses {
++ (NSArray *)xctAllSuperclasses {
   NSArray *arr = [super senAllSuperclasses];
   if([arr objectAtIndex:0] == [SPTXCTestCase class]) {
     return [NSArray arrayWithObject:[NSObject class]];

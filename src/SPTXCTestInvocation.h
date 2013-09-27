@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "SpectaTypes.h"
 
-@interface SPTSenTestInvocation : NSInvocation {
+@interface SPTXCTestInvocation : NSInvocation {
   SPTVoidBlock _SPT_invocationBlock;
 }
 

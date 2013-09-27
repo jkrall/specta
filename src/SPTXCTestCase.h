@@ -14,7 +14,7 @@
 }
 
 @property (nonatomic, assign) NSInvocation *SPT_invocation;
-@property (nonatomic, assign) SenTestCaseRun *SPT_run;
+@property (nonatomic, assign) XCTestCaseRun *SPT_run;
 @property (nonatomic, assign) BOOL SPT_skipped;
 @property (nonatomic, assign, readonly, getter = SPT_isPending) BOOL SPT_pending;
 
