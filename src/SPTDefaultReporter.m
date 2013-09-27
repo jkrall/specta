@@ -296,7 +296,7 @@
 
 - (void)printXCodeIntegrationOutputForSession:(XCTestRun *)sessionRun
 {
-  [self printSectionHeader:@"XCode (OCUnit) Test Output"];
+  [self printSectionHeader:@"XCode (XCTest) Test Output"];
   
   [sessionRun SPT_visitTestCaseRunsWithBlock:^(XCTestCaseRun *testRun) {
     
