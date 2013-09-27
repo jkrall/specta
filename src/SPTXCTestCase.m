@@ -186,9 +186,9 @@
     exception = [NSException exceptionWithName:name reason:description
                              userInfo:[[NSException failureInFile:file atLine:0 withDescription:sanitizedDescription] userInfo]];
   }
-  SPTXCTestCase *currentTestCase = [[[NSThread currentThread] threadDictionary] objectForKey:@"SPT_currentTestCase"];
-    // TODO: fix me
-  //[currentTestCase.SPT_run addException:exception];
+  // TODO: fix me? never used
+  // SPTXCTestCase *currentTestCase = [[[NSThread currentThread] threadDictionary] objectForKey:@"SPT_currentTestCase"];
+  // [currentTestCase.SPT_run addException:exception];
 }
 
 - (void)performTest:(XCTestRun *)run {
