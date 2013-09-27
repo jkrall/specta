@@ -58,34 +58,30 @@
   [super dealloc];
 }
 
-// ===== SenTestObserver ===============================================================================================
-#pragma mark - SenTestObserver
+// ===== XCTestObserver ===============================================================================================
+#pragma mark - XCTestObserver
 
 #define SPTSharedReporter ([SPTReporter sharedReporter])
 
-+ (void)testSuiteDidStart:(NSNotification *) aNotification
-{
-  [SPTSharedReporter testSuiteDidBegin:aNotification.object];
+- (void)testSuiteDidStart:(XCTestRun *)testRun {
+  [SPTSharedReporter testCaseDidBegin:(XCTestCaseRun *)testRun];
 }
 
-+ (void)testSuiteDidStop:(NSNotification *) aNotification
-{
-  [SPTSharedReporter testSuiteDidEnd:aNotification.object];
+- (void)testSuiteDidStop:(XCTestRun *)testRun {
+  [SPTSharedReporter testSuiteDidEnd:(XCTestSuiteRun *)testRun];
 }
 
-+ (void)testCaseDidStart:(NSNotification *) aNotification
-{
-  [SPTSharedReporter testCaseDidBegin:aNotification.object];
+- (void)testCaseDidStart:(XCTestRun *)testRun {
+  [SPTSharedReporter testCaseDidBegin:(XCTestCaseRun *)testRun];
 }
 
-+ (void)testCaseDidStop:(NSNotification *) aNotification
-{
-  [SPTSharedReporter testCaseDidEnd:aNotification.object];
+- (void)testCaseDidStop:(XCTestRun *)testRun {
+  [SPTSharedReporter testCaseDidEnd:(XCTestCaseRun *)testRun];
 }
 
-+ (void)testCaseDidFail:(NSNotification *) aNotification
-{
-  [SPTSharedReporter testCaseDidFail:aNotification.object];
+- (void)testCaseDidFail:(XCTestRun *)testRun withDescription:(NSString *)description inFile:(NSString *)filePath atLine:(NSUInteger)lineNumber {
+//    [super testCaseDidFail:testRun withDescription:description inFile:filePath atLine:lineNumber];
+    [SPTSharedReporter testCaseDidFail:(XCTestCaseRun *)testRun];
 }
 
 // ===== RUN STACK =====================================================================================================
