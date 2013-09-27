@@ -1,5 +1,5 @@
 #import "SenTestRun+Specta.h"
-#import "SPTSenTestCase.h"
+#import "SPTXCTestCase.h"
 #import "SPTExample.h"
 
 @implementation SenTestRun (Specta)
@@ -39,9 +39,9 @@
       pendingTestCaseCount += [testRun pendingTestCaseCount];
     }
   }
-  else if ([[self test] isKindOfClass:[SPTSenTestCase class]])
+  else if ([[self test] isKindOfClass:[SPTXCTestCase class]])
   {
-    SPTSenTestCase * testCase = (SPTSenTestCase *)[self test];
+    SPTXCTestCase * testCase = (SPTXCTestCase *)[self test];
     if (testCase != nil && [testCase SPT_isPending])
     {
       pendingTestCaseCount++;
@@ -65,9 +65,9 @@
       skippedTestCaseCount += [testRun skippedTestCaseCount];
     }
   }
-  else if ([[self test] isKindOfClass:[SPTSenTestCase class]])
+  else if ([[self test] isKindOfClass:[SPTXCTestCase class]])
   {
-    SPTSenTestCase * testCase = (SPTSenTestCase *)[self test];
+    SPTXCTestCase * testCase = (SPTXCTestCase *)[self test];
     if (testCase.SPT_skipped)
     {
       skippedTestCaseCount++;

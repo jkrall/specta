@@ -1,6 +1,6 @@
 #import "SPTSharedExampleGroups.h"
 #import "SPTExampleGroup.h"
-#import "SPTSenTestCase.h"
+#import "SPTXCTestCase.h"
 #import <objc/runtime.h>
 
 NSMutableDictionary *globalSharedExampleGroups = nil;
@@ -57,8 +57,8 @@ BOOL initialized = NO;
 + (void)defineSharedExampleGroups {}
 
 + (void)failWithException:(NSException *)exception {
-  SPTSenTestCase *currentTestCase = [[[NSThread currentThread] threadDictionary] objectForKey:@"SPT_currentTestCase"];
-  [currentTestCase failWithException: exception];
+  SPTXCTestCase *currentTestCase = [[[NSThread currentThread] threadDictionary] objectForKey:@"SPT_currentTestCase"];
+  [currentTestCase recordFailureWithDescription:[exception description] inFile:@"" atLine:0 expected:YES];
 }
 
 @end

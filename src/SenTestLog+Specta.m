@@ -1,6 +1,6 @@
 #import "SenTestLog+Specta.h"
 #import "SPTReporter.h"
-#import "SPTSenTestCase.h"
+#import "SPTXCTestCase.h"
 #import "SPTExample.h"
 
 #define SPTSharedReporter ([SPTReporter sharedReporter])

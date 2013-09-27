@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "SpectaSupport.h"
-#import "SPTSenTestCase.h"
+#import "SPTXCTestCase.h"
 #import "SPTSpec.h"
 #import "SPTExampleGroup.h"
 #import "SPTSharedExampleGroups.h"

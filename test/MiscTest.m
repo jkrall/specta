@@ -21,8 +21,8 @@ SpecEnd
 }
 
 - (void)testSPTSenTestCaseNotInSenTestCaseSubClassList {
-  // trick SenTestCase into thinking SPTSenTestCase is not a subclass of SenTestCase
-  expect([SenTestCase senAllSubclasses]).Not.toContain([SPTSenTestCase class]);
+  // trick SenTestCase into thinking SPTXCTestCase is not a subclass of SenTestCase
+  expect([SenTestCase senAllSubclasses]).Not.toContain([SPTXCTestCase class]);
 }
 
 @end

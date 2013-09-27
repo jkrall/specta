@@ -35,7 +35,7 @@ SpecEnd
 
 - (void)test_focused_examples_are_focused
 {
-  STAssertFalse([SPTSenTestCase SPT_focusedExamplesExist],
+  STAssertFalse([SPTXCTestCase SPT_focusedExamplesExist],
                 @"Focused examples should not exist if the spec is disabled");
   
   SPTSpec * spec = [_FocusedSpecTestSpec SPT_spec];

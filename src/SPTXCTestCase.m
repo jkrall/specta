@@ -1,4 +1,4 @@
-#import "SPTSenTestCase.h"
+#import "SPTXCTestCase.h"
 #import "SPTSpec.h"
 #import "SPTExample.h"
 #import "SPTSenTestInvocation.h"
@@ -12,7 +12,7 @@
 
 @end
 
-@implementation SPTSenTestCase
+@implementation SPTXCTestCase
 
 @synthesize
   SPT_invocation=_SPT_invocation
@@ -29,7 +29,7 @@
 + (void)initialize {
   [SPTSharedExampleGroups initialize];
   SPTSpec *spec = [[SPTSpec alloc] init];
-  SPTSenTestCase *testCase = [[[self class] alloc] init];
+  SPTXCTestCase *testCase = [[[self class] alloc] init];
   objc_setAssociatedObject(self, "SPT_spec", spec, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
   [testCase SPT_defineSpec];
   [testCase release];
@@ -147,7 +147,7 @@
   for(NSUInteger i = 0; i < [[self SPT_spec].compiledExamples count]; i ++) {
     SPTSenTestInvocation *invocation = (SPTSenTestInvocation *)[SPTSenTestInvocation invocationWithMethodSignature:[self instanceMethodSignatureForSelector:@selector(SPT_runExampleAtIndex:)]];
     invocation.SPT_invocationBlock = ^{
-      [(SPTSenTestCase *)[invocation target] SPT_runExampleAtIndex:i];
+      [(SPTXCTestCase *)[invocation target] SPT_runExampleAtIndex:i];
     };
     [invocation setSelector:@selector(SPT_runExampleAtIndex:)];
     [invocation setArgument:&i atIndex:2];
@@ -186,7 +186,7 @@
     exception = [NSException exceptionWithName:name reason:description
                              userInfo:[[NSException failureInFile:file atLine:0 withDescription:sanitizedDescription] userInfo]];
   }
-  SPTSenTestCase *currentTestCase = [[[NSThread currentThread] threadDictionary] objectForKey:@"SPT_currentTestCase"];
+  SPTXCTestCase *currentTestCase = [[[NSThread currentThread] threadDictionary] objectForKey:@"SPT_currentTestCase"];
   [currentTestCase.SPT_run addException:exception];
 }
 
@@ -198,7 +198,7 @@
 
 + (NSArray *)senAllSuperclasses {
   NSArray *arr = [super senAllSuperclasses];
-  if([arr objectAtIndex:0] == [SPTSenTestCase class]) {
+  if([arr objectAtIndex:0] == [SPTXCTestCase class]) {
     return [NSArray arrayWithObject:[NSObject class]];
   }
   return arr;

@@ -1,4 +1,5 @@
 #import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "SenTestCase+Specta.h"
 
 @class
@@ -6,7 +7,7 @@
 , SPTExample
 ;
 
-@interface SPTSenTestCase : SenTestCase {
+@interface SPTXCTestCase : XCTestCase {
   NSInvocation *_SPT_invocation;
   SenTestCaseRun *_SPT_run;
   BOOL _SPT_skipped;

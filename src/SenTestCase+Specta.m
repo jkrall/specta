@@ -1,13 +1,13 @@
 #import "SenTestCase+Specta.h"
-#import "SPTSenTestCase.h"
+#import "SPTXCTestCase.h"
 
 @implementation SenTestCase (Specta)
 
 - (NSString *)SPT_title
 {
-  if ([self isKindOfClass:[SPTSenTestCase class]])
+  if ([self isKindOfClass:[SPTXCTestCase class]])
   {
-    SPTExample * example = [(SPTSenTestCase *)self SPT_getCurrentExample];
+    SPTExample * example = [(SPTXCTestCase *)self SPT_getCurrentExample];
     return [example name];
   }
   else

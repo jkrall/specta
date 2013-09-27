@@ -1,5 +1,5 @@
 #import "SPTDefaultReporter.h"
-#import "SPTSenTestCase.h"
+#import "SPTXCTestCase.h"
 #import "SenTestRun+Specta.h"
 #import "SenTestCase+Specta.h"
 #import "SpectaUtility.h"
