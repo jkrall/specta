@@ -140,7 +140,7 @@
   return [[[self class] SPT_spec].compiledExamples objectAtIndex:i];
 }
 
-#pragma mark - SenTestCase overrides
+#pragma mark - XCTestCase overrides
 
 + (NSArray *)testInvocations {
   NSMutableArray *invocations = [NSMutableArray array];
