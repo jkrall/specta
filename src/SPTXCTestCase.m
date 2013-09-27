@@ -169,6 +169,7 @@
   return [NSString stringWithFormat:@"-[%@ %@]", specName, exampleName];
 }
 
+// TODO: remove? never used
 - (void)logException:(NSException *)exception {
   if(![exception filename]) {
     NSString *name = [exception name];
