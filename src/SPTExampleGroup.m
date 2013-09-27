@@ -37,8 +37,7 @@ static void runExampleBlock(id block, NSString *name) {
       NSString *message = [NSString stringWithFormat:@"\"%@\" failed to invoke done() callback before timeout (%f seconds)", name, timeout];
       SPTXCTestCase *currentTestCase = [[[NSThread currentThread] threadDictionary] objectForKey:@"SPT_currentTestCase"];
       SPTSpec *spec = [[currentTestCase class] SPT_spec];
-      NSException *exception = [NSException failureInFile:spec.fileName atLine:(int)spec.lineNumber withDescription:message];
-      [currentTestCase recordFailureWithDescription:[exception description] inFile:@"" atLine:0 expected:YES];
+      [currentTestCase recordFailureWithDescription:message inFile:spec.fileName atLine:spec.lineNumber expected:NO];
     }
   } else {
     ((SPTVoidBlock)block)();

@@ -1,8 +1,10 @@
 #import "TestHelper.h"
 
-SenTestSuiteRun *RunSpecClass(Class testClass) {
-  [SenTestObserver suspendObservation];
-  SenTestSuiteRun *result = (id)[(SenTestSuite *)[SenTestSuite testSuiteForTestCaseClass:testClass] run];
-  [SenTestObserver resumeObservation];
+XCTestSuiteRun * RunSpecClass(Class testClass) {
+//  [XCTestObserver suspendObservation];
+  [XCTestObserver stopObserving];
+  XCTestSuiteRun *result = (id)[(XCTestSuite *)[XCTestSuite testSuiteForTestCaseClass:testClass] run];
+//  [XCTestObserver resumeObservation];
+
   return result;
 }

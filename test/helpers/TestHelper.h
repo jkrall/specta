@@ -1,4 +1,4 @@
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #define SPT_CEDAR_SYNTAX
 #import "Specta.h"
 #define EXP_SHORTHAND
@@ -6,4 +6,4 @@
 
 #define RunSpec(TestClass) RunSpecClass([TestClass class])
 
-SenTestSuiteRun *RunSpecClass(Class testClass);
+XCTestSuiteRun * RunSpecClass(Class testClass);
