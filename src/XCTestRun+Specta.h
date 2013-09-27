@@ -1,8 +1,8 @@
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface SenTestRun (Specta)
+@interface XCTestRun (Specta)
 
-- (void)SPT_visitTestCaseRunsWithBlock:(void(^)(SenTestCaseRun * testRun))block;
+- (void)SPT_visitTestCaseRunsWithBlock:(void (^)(XCTestCaseRun *testRun))block;
 
 // ===== PENDING TEST CASES ============================================================================================
 #pragma mark - Pending Test Cases

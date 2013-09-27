@@ -1,10 +1,10 @@
-#import "SenTestRun+Specta.h"
+#import "XCTestRun+Specta.h"
 #import "SPTXCTestCase.h"
 #import "SPTExample.h"
 
-@implementation SenTestRun (Specta)
+@implementation XCTestRun (Specta)
 
-- (void)SPT_visitTestCaseRunsWithBlock:(void(^)(SenTestCaseRun * testRun))block
+- (void)SPT_visitTestCaseRunsWithBlock:(void (^)(XCTestCaseRun *testRun))block
 {
   if (block == nil) return;
   
