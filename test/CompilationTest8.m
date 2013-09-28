@@ -19,7 +19,7 @@ describe(@"group 1", ^{
 
 SpecEnd
 
-@interface CompilationTest8 : SenTestCase; @end
+@interface CompilationTest8 : XCTestCase; @end
 @implementation CompilationTest8
 
 - (void)testCompiledExampleNames {

@@ -32,11 +32,11 @@ sharedExamples(@"shared example that does not capture the data dictionary", ^(NS
 
 SharedExamplesEnd
 
-@interface SharedExamplesTest4 : SenTestCase; @end
+@interface SharedExamplesTest4 : XCTestCase; @end
 @implementation SharedExamplesTest4
 
 - (void)testSharedExamples {
-  SenTestSuiteRun *result = RunSpec(_SharedExamplesTest4Spec);
+  XCTestSuiteRun *result = RunSpec(_SharedExamplesTest4Spec);
   expect([result testCaseCount]).toEqual(2);
   expect([result failureCount]).toEqual(0);
   expect([result hasSucceeded]).toEqual(YES);

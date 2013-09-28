@@ -49,7 +49,7 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface AsyncSpecTest2 : SenTestCase; @end
+@interface AsyncSpecTest2 : XCTestCase; @end
 @implementation AsyncSpecTest2
 
 - (void)testBeforeAllAndAfterAllHooks {

@@ -13,16 +13,16 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface MiscTest : SenTestCase; @end
+@interface MiscTest : XCTestCase; @end
 @implementation MiscTest
 
-- (void)test_MiscTestSpecInSenTestCaseSubClassList {
-  expect([SenTestCase senAllSubclasses]).toContain([_MiscTestSpec class]);
+- (void)test_MiscTestSpecInXCTestCaseSubClassList {
+  expect([XCTestCase senAllSubclasses]).toContain([_MiscTestSpec class]);
 }
 
-- (void)testSPTSenTestCaseNotInSenTestCaseSubClassList {
-  // trick SenTestCase into thinking SPTXCTestCase is not a subclass of SenTestCase
-  expect([SenTestCase senAllSubclasses]).Not.toContain([SPTXCTestCase class]);
+- (void)testSPTXCTestCaseNotInXCTestCaseSubClassList {
+  // trick XCTestCase into thinking SPTXCTestCase is not a subclass of XCTestCase
+  expect([XCTestCase senAllSubclasses]).Not.toContain([SPTXCTestCase class]);
 }
 
 @end

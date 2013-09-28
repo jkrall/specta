@@ -14,11 +14,11 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface PassingSpecTest : SenTestCase; @end
+@interface PassingSpecTest : XCTestCase; @end
 @implementation PassingSpecTest
 
 - (void)testPassingSpec {
-  SenTestRun *result = RunSpec(_PassingSpecTestSpec);
+  XCTestRun *result = RunSpec(_PassingSpecTestSpec);
   expect([result failureCount]).toEqual(0);
   expect([result hasSucceeded]).toEqual(YES);
 }

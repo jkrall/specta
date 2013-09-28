@@ -6,11 +6,11 @@ it(@"it with PENDING", PENDING);
 
 SPEC_END
 
-@interface CedarDSLTest : SenTestCase; @end
+@interface CedarDSLTest : XCTestCase; @end
 @implementation CedarDSLTest
 
 - (void)testSingleExampleGroup {
-  SenTestSuiteRun *result = RunSpec(_CedarDSLTestSpec);
+  XCTestSuiteRun *result = RunSpec(_CedarDSLTestSpec);
   expect([result testCaseCount]).toEqual(1);
   expect([result failureCount]).toEqual(0);
   expect([result hasSucceeded]).toEqual(YES);

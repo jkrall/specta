@@ -12,7 +12,7 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface CompilationTest1 : SenTestCase; @end
+@interface CompilationTest1 : XCTestCase; @end
 @implementation CompilationTest1
 
 - (void)testSingleExample {

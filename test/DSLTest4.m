@@ -17,7 +17,7 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface DSLTest4 : SenTestCase; @end
+@interface DSLTest4 : XCTestCase; @end
 @implementation DSLTest4
 
 - (void)testExamples {

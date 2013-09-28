@@ -6,7 +6,7 @@ describe(@"group", ^{});
 
 SpecEnd
 
-@interface DSLTest1 : SenTestCase; @end
+@interface DSLTest1 : XCTestCase; @end
 @implementation DSLTest1
 
 - (void)testSingleExampleGroup {

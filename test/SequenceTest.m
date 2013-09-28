@@ -80,7 +80,7 @@ SpecEnd
 
 #define assertSequence(i, obj) expect([sequence objectAtIndex:(i)]).toEqual((obj)); i++
 
-@interface SequenceTest : SenTestCase
+@interface SequenceTest : XCTestCase
 @end
 
 @implementation SequenceTest

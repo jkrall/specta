@@ -33,7 +33,7 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface CompilationTest4 : SenTestCase; @end
+@interface CompilationTest4 : XCTestCase; @end
 @implementation CompilationTest4
 
 - (void)testBeforeEachAndAfterEachHooks {

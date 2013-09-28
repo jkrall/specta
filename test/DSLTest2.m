@@ -26,7 +26,7 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface DSLTest2 : SenTestCase; @end
+@interface DSLTest2 : XCTestCase; @end
 @implementation DSLTest2
 
 - (void)testBeforeAndAfterHooks {

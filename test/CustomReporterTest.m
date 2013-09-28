@@ -8,7 +8,7 @@
 @implementation CustomReporterTestReporter
 @end
 
-@interface CustomReporterTest : SenTestCase
+@interface CustomReporterTest : XCTestCase
 
 @end
 
@@ -23,13 +23,13 @@
   NSString * customReporterClassName = [[[NSProcessInfo processInfo] environment] objectForKey:@"SPECTA_REPORTER_CLASS"];
   if (customReporterClassName != nil)
   {
-    STAssertEqualObjects(NSStringFromClass([[SPTReporter sharedReporter] class]),
+    XCTAssertEqualObjects(NSStringFromClass([[SPTReporter sharedReporter] class]),
                          customReporterClassName,
                          @"Specta should load the custom reporter from the SPECTA_REPORTER_CLASS environment variable");
   }
   else
   {
-    STAssertEqualObjects(NSStringFromClass([[SPTReporter sharedReporter] class]),
+    XCTAssertEqualObjects(NSStringFromClass([[SPTReporter sharedReporter] class]),
                          @"SPTDefaultReporter",
                          @"Specta should use SPTDefaultReporter when SPECTA_REPORTER_CLASS variable is not set");
   }

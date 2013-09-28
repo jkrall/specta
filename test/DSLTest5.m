@@ -20,7 +20,7 @@ describe(@"group 1", ^{
 
 SpecEnd
 
-@interface DSLTest5 : SenTestCase; @end
+@interface DSLTest5 : XCTestCase; @end
 @implementation DSLTest5
 
 - (void)testNestedExamples {

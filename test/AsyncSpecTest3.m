@@ -61,13 +61,13 @@ describe(@"afterAll", ^{
 
 SpecEnd
 
-@interface AsyncSpecTest3 : SenTestCase; @end
+@interface AsyncSpecTest3 : XCTestCase; @end
 @implementation AsyncSpecTest3
 
 - (void)testFailingHooks {
   foo = @"not foo";
   bar = @"not bar";
-  SenTestRun *result = RunSpec(_AsyncSpecTest3Spec);
+  XCTestRun *result = RunSpec(_AsyncSpecTest3Spec);
   expect([result failureCount]).toEqual(4);
   expect([result hasSucceeded]).toEqual(NO);
   foo = @"foo";

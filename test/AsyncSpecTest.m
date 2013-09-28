@@ -32,13 +32,13 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface AsyncSpecTest : SenTestCase; @end
+@interface AsyncSpecTest : XCTestCase; @end
 @implementation AsyncSpecTest
 
 - (void)testAsyncSpec {
   foo = @"not foo";
   bar = @"not bar";
-  SenTestRun *result = RunSpec(_AsyncSpecTestSpec);
+  XCTestRun *result = RunSpec(_AsyncSpecTestSpec);
   expect([result failureCount]).toEqual(2);
   expect([result hasSucceeded]).toEqual(NO);
   foo = @"foo";

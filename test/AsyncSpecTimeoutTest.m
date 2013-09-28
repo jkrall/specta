@@ -20,12 +20,12 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface AsyncSpecTimeoutTest : SenTestCase; @end
+@interface AsyncSpecTimeoutTest : XCTestCase; @end
 @implementation AsyncSpecTimeoutTest
 
 - (void)testAsyncSpec {
   setAsyncSpecTimeout(0.1);
-  SenTestRun *result = RunSpec(_AsyncSpecTimeoutTestSpec);
+  XCTestRun *result = RunSpec(_AsyncSpecTimeoutTestSpec);
   expect([result failureCount]).toEqual(1);
   expect([result hasSucceeded]).toEqual(NO);
   setAsyncSpecTimeout(10.0);

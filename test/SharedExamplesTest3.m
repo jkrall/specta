@@ -53,7 +53,7 @@ describe(@"overriding global shared examples with local shared examples", ^{
 
 SpecEnd
 
-@interface SharedExamplesTest3 : SenTestCase; @end
+@interface SharedExamplesTest3 : XCTestCase; @end
 @implementation SharedExamplesTest3
 
 - (void)testSharedExamples {

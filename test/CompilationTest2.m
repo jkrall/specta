@@ -29,7 +29,7 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface CompilationTest2 : SenTestCase; @end
+@interface CompilationTest2 : XCTestCase; @end
 @implementation CompilationTest2
 
 - (void)testMultipleExamples {

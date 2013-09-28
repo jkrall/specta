@@ -47,13 +47,13 @@ sharedExamples(@"global shared 2", ^(NSDictionary *data) {
 
 SharedExamplesEnd
 
-@interface SharedExamplesTest2 : SenTestCase; @end
+@interface SharedExamplesTest2 : XCTestCase; @end
 @implementation SharedExamplesTest2
 
 - (void)testSharedExamples {
   foo = @"Not Foo";
   items = [[NSMutableArray alloc] init];
-  SenTestSuiteRun *result = RunSpec(_SharedExamplesTest2Spec);
+  XCTestSuiteRun *result = RunSpec(_SharedExamplesTest2Spec);
   expect([result testCaseCount]).toEqual(4);
   expect([result failureCount]).toEqual(1);
   expect([result hasSucceeded]).toEqual(NO);

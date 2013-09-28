@@ -11,7 +11,7 @@ context(@"group 4", ^{});
 
 SpecEnd
 
-@interface DSLTest3 : SenTestCase; @end
+@interface DSLTest3 : XCTestCase; @end
 @implementation DSLTest3
 
 - (void)testNestedExampleGroups {

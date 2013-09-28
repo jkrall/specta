@@ -19,13 +19,13 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface FailingSpecTest : SenTestCase; @end
+@interface FailingSpecTest : XCTestCase; @end
 @implementation FailingSpecTest
 
 - (void)testFailingSpec {
   foo = @"not foo";
   bar = @"not bar";
-  SenTestSuiteRun *result = RunSpec(_FailingSpecTestSpec);
+  XCTestSuiteRun *result = RunSpec(_FailingSpecTestSpec);
   expect([result failureCount]).toEqual(2);
   expect([result hasSucceeded]).toEqual(NO);
   foo = @"foo";

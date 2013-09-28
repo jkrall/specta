@@ -39,7 +39,7 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface ReRunTest : SenTestCase; @end
+@interface ReRunTest : XCTestCase; @end
 @implementation ReRunTest
 
 - (void)test_Tests_should_be_able_to_run_multiple_times {

@@ -38,12 +38,12 @@ context(@"group2", ^{
 
 SpecEnd
 
-@interface SharedExamplesTest1 : SenTestCase; @end
+@interface SharedExamplesTest1 : XCTestCase; @end
 @implementation SharedExamplesTest1
 
 - (void)testSharedExamples {
   items = [[NSMutableArray alloc] init];
-  SenTestSuiteRun *result = RunSpec(_SharedExamplesTest1Spec);
+  XCTestSuiteRun *result = RunSpec(_SharedExamplesTest1Spec);
   expect([result testCaseCount]).toEqual(4);
   expect([result failureCount]).toEqual(0);
   expect([result hasSucceeded]).toEqual(YES);

@@ -45,7 +45,7 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface CompilationTest5 : SenTestCase; @end
+@interface CompilationTest5 : XCTestCase; @end
 @implementation CompilationTest5
 
 - (void)testMultipleBeforeEachAndAfterEachHooks {

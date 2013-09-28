@@ -30,7 +30,7 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface UnexpectedExceptionTest : SenTestCase; @end
+@interface UnexpectedExceptionTest : XCTestCase; @end
 @implementation UnexpectedExceptionTest
 
 - (void)setUp
@@ -42,7 +42,7 @@ SpecEnd
 - (void)testUnexpectedExceptionHandling {
   shouldRaiseException = YES;
   
-  SenTestSuiteRun *result = RunSpec(_UnexpectedExceptionTestSpec);
+  XCTestSuiteRun *result = RunSpec(_UnexpectedExceptionTestSpec);
   expect([result failureCount]).toEqual(0);
   expect([result unexpectedExceptionCount]).toEqual(1);
   expect([result hasSucceeded]).toEqual(NO);

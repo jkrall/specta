@@ -23,11 +23,11 @@ describe(@"group", ^{
 });
 SpecEnd
 
-@interface PendingSpecTest2 : SenTestCase; @end
+@interface PendingSpecTest2 : XCTestCase; @end
 @implementation PendingSpecTest2
 
 - (void)testPendingSpec {
-  SenTestSuiteRun *result = RunSpec(_PendingSpecTest2Spec);
+  XCTestSuiteRun *result = RunSpec(_PendingSpecTest2Spec);
   expect([result testCaseCount]).toEqual(12);
   expect([result failureCount]).toEqual(0);
   expect([result hasSucceeded]).toEqual(YES);

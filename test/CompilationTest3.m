@@ -33,7 +33,7 @@ describe(@"group 1", ^{
 
 SpecEnd
 
-@interface CompilationTest3 : SenTestCase; @end
+@interface CompilationTest3 : XCTestCase; @end
 @implementation CompilationTest3
 
 - (void)testNestedExamples {

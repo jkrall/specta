@@ -4,7 +4,7 @@
 SpecBegin(_SpectaUtilityTest)
 SpecEnd
 
-@interface SpectaUtilityTest : SenTestCase
+@interface SpectaUtilityTest : XCTestCase
 
 @end
 
@@ -12,14 +12,14 @@ SpecEnd
 
 - (void)test_SPT_IsSpecClass_returns_yes_when_provided_a_spec_class
 {
-  STAssertTrue(SPT_IsSpecClass([_SpectaUtilityTestSpec class]),
+  XCTAssertTrue(SPT_IsSpecClass([_SpectaUtilityTestSpec class]),
                @"SPT_IsSpecClass returns YES when provided a spec class");
 }
 
-- (void)test_SPT_IsSpecClass_returns_no_when_provided_a_sentest_class
+- (void)test_SPT_IsSpecClass_returns_no_when_provided_a_xctest_class
 {
-  STAssertFalse(SPT_IsSpecClass([SpectaUtilityTest class]),
-                @"SPT_IsSpecClass returns NO when provided a SenTest test class");
+  XCTAssertFalse(SPT_IsSpecClass([SpectaUtilityTest class]),
+                @"SPT_IsSpecClass returns NO when provided a XCTest test class");
 }
 
 @end

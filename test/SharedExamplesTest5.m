@@ -16,12 +16,12 @@ describe(@"group", ^{
 
 SpecEnd
 
-@interface SharedExamplesTest5 : SenTestCase; @end
+@interface SharedExamplesTest5 : XCTestCase; @end
 @implementation SharedExamplesTest5
 
 - (void)testSharedExamplesFailingIfCalledInsideAnItBlock {
   shouldInvokeItShouldBehaveLike = YES;
-  SenTestSuiteRun *result = RunSpec(_SharedExamplesTest5Spec);
+  XCTestSuiteRun *result = RunSpec(_SharedExamplesTest5Spec);
   expect([result testCaseCount]).toEqual(1);
   expect([result failureCount]).toEqual(1);
   expect([result hasSucceeded]).toEqual(NO);
