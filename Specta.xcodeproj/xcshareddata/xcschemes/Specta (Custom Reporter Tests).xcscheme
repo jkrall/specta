@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E9D96A3914B6B8AB007D9521"
-               BuildableName = "SpectaTests.octest"
+               BuildableName = "SpectaTests.xctest"
                BlueprintName = "SpectaTests"
                ReferencedContainer = "container:Specta.xcodeproj">
             </BuildableReference>
