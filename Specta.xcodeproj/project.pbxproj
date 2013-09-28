@@ -100,10 +100,7 @@
 		E9B777D714BA308B00D8DC76 /* SPTExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D9420814B8B42A00CD833A /* SPTExample.m */; };
 		E9B777D814BA308B00D8DC76 /* SPTExampleGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D9420A14B8B42A00CD833A /* SPTExampleGroup.m */; };
 		E9B777D914BA308B00D8DC76 /* SPTXCTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B7778114B9E15A00D8DC76 /* SPTXCTestCase.m */; };
-		E9B777E114BA312600D8DC76 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D96A3B14B6B8AB007D9521 /* SenTestingKit.framework */; };
 		E9B777E314BA313A00D8DC76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B777DE14BA30F600D8DC76 /* Foundation.framework */; };
-		E9B777F314BA31FC00D8DC76 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D96A3B14B6B8AB007D9521 /* SenTestingKit.framework */; };
-		E9B777F514BA320400D8DC76 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D96A3B14B6B8AB007D9521 /* SenTestingKit.framework */; };
 		E9B777F614BA320D00D8DC76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B777DE14BA30F600D8DC76 /* Foundation.framework */; };
 		E9B777F714BA321400D8DC76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D96A2E14B6B8AB007D9521 /* Foundation.framework */; };
 		E9B777F814BA329400D8DC76 /* Specta-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E9D9420414B8B42A00CD833A /* Specta-Prefix.pch */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -152,7 +149,6 @@
 		E9D9425914B8B43200CD833A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E9D9424414B8B43200CD833A /* LICENSE */; };
 		E9D9425A14B8B43200CD833A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E9D9424714B8B43200CD833A /* README.md */; };
 		E9D96A4014B6B8AB007D9521 /* libSpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D96A2614B6B8AB007D9521 /* libSpecta.a */; };
-		E9D96A5614B6BF0A007D9521 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D96A3B14B6B8AB007D9521 /* SenTestingKit.framework */; };
 		EE8DA94D17AFC82600A58C88 /* SpectaUtilityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB75B53176E861A00FF6631 /* SpectaUtilityTest.m */; };
 		EE8DA94E17AFC82600A58C88 /* SpectaUtilityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB75B53176E861A00FF6631 /* SpectaUtilityTest.m */; };
 /* End PBXBuildFile section */
@@ -278,7 +274,6 @@
 		E9D96A2614B6B8AB007D9521 /* libSpecta.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpecta.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D96A2E14B6B8AB007D9521 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E9D96A3A14B6B8AB007D9521 /* SpectaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpectaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9D96A3B14B6B8AB007D9521 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,7 +282,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B777E314BA313A00D8DC76 /* Foundation.framework in Frameworks */,
-				E9B777E114BA312600D8DC76 /* SenTestingKit.framework in Frameworks */,
 				3306C29C3343230D8F45BB9F /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +291,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B777F614BA320D00D8DC76 /* Foundation.framework in Frameworks */,
-				E9B777F514BA320400D8DC76 /* SenTestingKit.framework in Frameworks */,
 				E9B777BB14BA294C00D8DC76 /* libSpecta-iOS.a in Frameworks */,
 				E96187C814C4AFBD0021D7CE /* libExpecta-ios-universal.a in Frameworks */,
 				3306C155F48BB9A6D50A494B /* XCTest.framework in Frameworks */,
@@ -309,7 +302,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B777D414BA306F00D8DC76 /* Foundation.framework in Frameworks */,
-				E9D96A5614B6BF0A007D9521 /* SenTestingKit.framework in Frameworks */,
 				3306C51829C8FA859D33279C /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +311,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B777F714BA321400D8DC76 /* Foundation.framework in Frameworks */,
-				E9B777F314BA31FC00D8DC76 /* SenTestingKit.framework in Frameworks */,
 				E9D96A4014B6B8AB007D9521 /* libSpecta.a in Frameworks */,
 				E9D9425814B8B43200CD833A /* libExpecta-macosx.a in Frameworks */,
 				3306C084037079BACEA57838 /* XCTest.framework in Frameworks */,
@@ -513,7 +504,6 @@
 			children = (
 				E9B777DC14BA30CE00D8DC76 /* macosx */,
 				E9B777DD14BA30E100D8DC76 /* ios */,
-				E9D96A3B14B6B8AB007D9521 /* SenTestingKit.framework */,
 				3306C5498589744B0B1E0CA5 /* XCTest.framework */,
 			);
 			name = frameworks;
